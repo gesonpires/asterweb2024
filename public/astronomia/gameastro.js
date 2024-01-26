@@ -26,6 +26,7 @@ let questions = [
         choice3: 'conjuntos de estrelas 10 vezes maiores que o Sol',
         choice4: 'um grande sistema, gravitacionalmente ligado, de estrelas, restos de estrelas envoltos por gás e poeira',
         answer: 4,
+        supportText: 'Massa atrai massa.'
     },{
         question: 'Uma nebulosa é',
         choice1: 'o sinônimo de galáxia',
@@ -33,6 +34,7 @@ let questions = [
         choice3: 'nuvens de poeira de elementos residuais de uma estrela que implodiu',
         choice4: 'uma galáxia que contém pelo menos um buraco-negro',
         answer: 3,
+        supportText: 'Resulta da desagregação.'
     },{
         question: 'De acordo com a lei de Hubble, as galáxias',
         choice1: 'estão se aproximando',
@@ -40,6 +42,7 @@ let questions = [
         choice3: 'mantém a distância constante',
         choice4: 'devem possuir pelo menos 1 buraco-negro em seu centro',
         answer: 2,
+        supportText: 'Expansão.'
        
     },{
         question: 'No modelo copernicano,',
@@ -48,6 +51,7 @@ let questions = [
         choice3: 'as órbitas são circulares e não há epiclicos',
         choice4: 'as órbitas são elípticas e não há epiciclos',
         answer: 3,
+        supportText: 'Influência das formas perfeitas.'
     },{
         question: 'A paralaxe heliocêntrica é',
         choice1: 'um método para prever eclipses solares',
@@ -55,6 +59,7 @@ let questions = [
         choice3: 'usada para medir a distância das estrelas mais próximas de nós',
         choice4: 'usada para medir a distância do Sol até nós',
         answer: 3,
+        supportText: 'Medidas mais "próximas".'
     },{
         question: 'De acordo com a teoria do Big-Bang ...',
         choice1: 'no passado, o Universo continha átomos mais pesados',
@@ -62,6 +67,7 @@ let questions = [
         choice3: 'o Universo tende a se contrair',
         choice4: 'no passado, o Universo era  muito quente e muito brilhante',
         answer: 4,
+        supportText: 'Mais energia interna.'
     },{
         question: 'A observação de objetos celestes depende da captação de',
         choice1: 'radiação eletromagnética emitida por eles',
@@ -69,6 +75,7 @@ let questions = [
         choice3: 'neutrinos emitidos por buracos-negros',
         choice4: 'raios cósmicos',
         answer: 1,
+        supportText: 'Viaja pelo espaço sideral.'
     },{
         question: 'A unidade astronômica(UA) equivale à distância média entre ...',
         choice1: 'Sol e Plutão',
@@ -76,6 +83,7 @@ let questions = [
         choice3: 'Sol e Terra',
         choice4: 'Sol e Marte',
         answer: 3,
+        supportText: 'Essa é decoreba.'
     },{
         question: 'Um método para medir a distância das estrelas até nós é o(a)',
         choice1: 'desvio para o azul',
@@ -83,6 +91,7 @@ let questions = [
         choice3: 'desvio para o vermelho',
         choice4: 'efeito Doppler',
         answer: 2,
+        supportText: 'Parecida com outra questão.'
     },
 ]
 
