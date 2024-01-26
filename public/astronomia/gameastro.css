@@ -83,3 +83,19 @@ body {
         min-width: 40rem;
     }
 }
+
+.swal-wide {
+    width: 600px; /* ou qualquer outro tamanho */
+}
+
+.swal-title {
+    font-size: 40px; /* tamanho da fonte para o título */
+}
+
+.swal-text {
+    font-size: 40px; /* tamanho da fonte para o texto */
+}
+
+.swal-confirm-button {
+    font-size: 20px !important; /* Ajuste o tamanho da fonte conforme necessário */
+}
