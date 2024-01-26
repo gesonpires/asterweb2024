@@ -125,26 +125,26 @@ choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return
 
-        acceptingAnswers = false
         const selectedChoice = e.target
         const selectedAnswer = selectedChoice.dataset['number']
 
         let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
 
         if(classToApply === 'incorrect' && currentQuestion.supportText) {
-            alert(currentQuestion.supportText); // Ou atualize um elemento do DOM
-        }
-                
-        if(classToApply === 'correct') {
-            incrementScore(SCORE_POINTS)
+            alert(currentQuestion.supportText);
+            // Não altera para a próxima pergunta
+            acceptingAnswers = true; // Permite ao usuário tentar novamente
+        } else if (classToApply === 'correct') {
+            incrementScore(SCORE_POINTS);
+            setTimeout(() => {
+                getNewQuestion();
+            }, 1000);
         }
 
-        selectedChoice.parentElement.classList.add(classToApply)
-
+        selectedChoice.parentElement.classList.add(classToApply);
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply)
-            getNewQuestion()
-        }, 1000)
+            selectedChoice.parentElement.classList.remove(classToApply);
+        }, 1000);
     })
 })
 
