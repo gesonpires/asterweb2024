@@ -165,8 +165,11 @@ choices.forEach(choice => {
             Swal.fire({
                 title:'Correto!',
                 text: 'Parabéns, você acertou!',
-                icon: 'success',
-                confirmButtonText: 'Próxima pergunta'
+                iconHtml: '<i class="fa fa-check" aria-hidden="true"></i>', // FontAwesome
+                confirmButtonText: 'Próxima pergunta',
+                customClass: {
+                    icon: 'custom-icon' // classe personalizada se necessário para estilos adicionais
+                }
             }).then(() => {
                 incrementScore(SCORE_POINTS);
                 getNewQuestion();
