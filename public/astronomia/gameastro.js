@@ -131,6 +131,7 @@ getNewQuestion = () => {
     attempts = 2; // Reseta as tentativas para a nova pergunta
 }
 
+
 choices.forEach(choice => {
     choice.addEventListener('click', e => {
         if (!acceptingAnswers) return;
@@ -147,30 +148,22 @@ choices.forEach(choice => {
                 Swal.fire({
                     title: 'Resposta Incorreta!',
                     text: `Tentativas restantes: ${attempts}\n${currentQuestion.supportText}`,
-                    icon: 'error',
+                    imageUrl: '../assets/img/error-10376.svg',
                     confirmButtonText: 'Tentar Novamente',
-                    customClass: {
-                        popup: 'swal-wide',
-                        title: 'swal-title',
-                        text: 'swal-text',
-                        confirmButton: 'swal-confirm-button',
-                        icon: 'swal-icon'
-                    }
+                    imageWidth: 80,
+                    imageHeight: 80,
+                    imageAlt: 'Ícone de erro customizado',
                 });
                 acceptingAnswers = true; // Permite que o usuário tente novamente
             } else {
                 Swal.fire({
                     title: 'Sem mais tentativas!',
                     text: 'A resposta correta era: ' + currentQuestion['choice' + currentQuestion.answer],
-                    icon: 'error',
-                    confirmButtonText: 'Próxima Pergunta',
-                    customClass: {
-                        popup: 'swal-wide',
-                        title: 'swal-title',
-                        text: 'swal-text',
-                        confirmButton: 'swal-confirm-button',
-                        icon: 'swal-icon'
-                    }                   
+                    imageUrl: '../assets/img/error-10376.svg',
+                    confirmButtonText: 'Tentar Novamente',
+                    imageWidth: 80,
+                    imageHeight: 80,
+                    imageAlt: 'Ícone de erro customizado',
                 }).then(() => {
                     getNewQuestion();
                 });
@@ -179,15 +172,12 @@ choices.forEach(choice => {
             Swal.fire({
                 title:'Correto!',
                 text: 'Parabéns, você acertou!',
-                icon: 'success',
                 confirmButtonText: 'Próxima pergunta',
-                customClass: {
-                    popup: 'swal-wide',
-                    title: 'swal-title',
-                    text: 'swal-text',
-                    confirmButton: 'swal-confirm-button',
-                    icon: 'swal-icon'
-                }
+                imageUrl: '../assets/img/check-7050.svg',
+                imageWidth: 80,
+                imageHeight: 80,
+                imageAlt: 'Ícone de check customizado',    
+
             }).then(() => {
                 incrementScore(SCORE_POINTS);
                 getNewQuestion();

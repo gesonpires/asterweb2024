@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste SweetAlert2</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+</head>
+<body>
+    <button onclick="testSweetAlert()">Teste o SweetAlert2</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function testSweetAlert() {
+            Swal.fire({
+                title: 'Erro!',
+                text: 'Isto é um teste.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        }
+    </script>
+</body>
+</html>
