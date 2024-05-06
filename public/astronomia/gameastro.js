@@ -149,6 +149,13 @@ choices.forEach(choice => {
                     text: `Tentativas restantes: ${attempts}\n${currentQuestion.supportText}`,
                     icon: 'error',
                     confirmButtonText: 'Tentar Novamente',
+                    customClass: {
+                        popup: 'swal-wide',
+                        title: 'swal-title',
+                        text: 'swal-text',
+                        confirmButton: 'swal-confirm-button',
+                        icon: 'swal-icon'
+                    }
                 });
                 acceptingAnswers = true; // Permite que o usuário tente novamente
             } else {
@@ -156,7 +163,14 @@ choices.forEach(choice => {
                     title: 'Sem mais tentativas!',
                     text: 'A resposta correta era: ' + currentQuestion['choice' + currentQuestion.answer],
                     icon: 'error',
-                    confirmButtonText: 'Próxima Pergunta',                    
+                    confirmButtonText: 'Próxima Pergunta',
+                    customClass: {
+                        popup: 'swal-wide',
+                        title: 'swal-title',
+                        text: 'swal-text',
+                        confirmButton: 'swal-confirm-button',
+                        icon: 'swal-icon'
+                    }                   
                 }).then(() => {
                     getNewQuestion();
                 });
@@ -167,6 +181,13 @@ choices.forEach(choice => {
                 text: 'Parabéns, você acertou!',
                 icon: 'success',
                 confirmButtonText: 'Próxima pergunta',
+                customClass: {
+                    popup: 'swal-wide',
+                    title: 'swal-title',
+                    text: 'swal-text',
+                    confirmButton: 'swal-confirm-button',
+                    icon: 'swal-icon'
+                }
             }).then(() => {
                 incrementScore(SCORE_POINTS);
                 getNewQuestion();

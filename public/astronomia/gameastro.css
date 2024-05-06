@@ -85,17 +85,15 @@ body {
 }
 
 .swal-wide {
-    width: 900px ;/* ou qualquer outro tamanho */
+    width: 900px;/* ou qualquer outro tamanho */
+    font-size: 20px;
 }
 
-.swal-title {
-    font-size: 50px !important; /* tamanho da fonte para o título */
-}
 
-.swal-text {
-    font-size: 40px !important; /* tamanho da fonte para o texto */
-}
-
-.swal-confirm-button {
-    font-size: 38px !important ; /* Ajuste o tamanho da fonte conforme necessário */
+.swal-icon {
+    width: 100px;  /* Aumente o tamanho conforme necessário */
+    height: 100px;  /* Mantenha a proporção quadrada para os ícones */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
