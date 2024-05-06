@@ -1,3 +1,7 @@
+function sanitizeString(str) {
+    return str.replace(/[^a-z0-9áéíóúñü \.,_-]/gim, "").trim();
+}
+
 const username = document.querySelector('#username')
 const saveScoreBtn = document.querySelector('#saveScoreBtn')
 const finalScore = document.querySelector('#finalScore')
@@ -15,6 +19,8 @@ username.addEventListener('keyup', () => {
 
 saveHighScore = e => {
     e.preventDefault()
+
+    const sanitizedUsername = sanitizeString(username.value);
 
     const score = {
         score: mostRecentScore,
