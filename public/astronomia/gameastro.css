@@ -2,6 +2,7 @@ body {
     color: #fff;
 }
 
+
 .choice-container {
     display: flex;
     margin-bottom: 0.8rem;
@@ -9,7 +10,7 @@ body {
     border-radius: 4px;
     background: rgb(18, 93, 255);
     font-size: 3rem;
-    min-width: 80rem;
+    padding: 2rem;
 }
 
 .choice-container:hover {
@@ -80,11 +81,41 @@ body {
 
 @media screen and (max-width: 768px) {
     .choice-container {
-        min-width: 40rem;
+        min-width: 0;  /* Remove min-width em telas pequenas */
+        font-size: 3rem;  /* Fonte menor para dispositivos móveis */
+        padding: 1rem;  /* Menor padding para mais espaço */
+    }
+
+    .hud-prefix, .hud-main-text {
+        font-size: 1.5rem;  /* Ajusta o tamanho da fonte no HUD */
+    }
+
+    .swal-wide {
+        width: 300px;/* ou qualquer outro tamanho */
+        font-size: 20px; /* tamanho da fonte para elementos maiores dentro do SweetAlert */
     }
 }
 
-.swal-wide {
-    width: 900px;/* ou qualquer outro tamanho */
-    font-size: 50px;
+body, html {
+    max-width: 100vw;
+    overflow-x: hidden;  /* Previne o overflow horizontal */
+}
+
+.swal-title {
+    font-size: 30px; /* Ajuste o tamanho do título do SweetAlert */
+}
+.swal-text {
+    font-size: 20px;
+}
+
+.swal-button {
+    font-size: 70px; /* Tamanho da fonte para botões */
+}
+
+#game {
+    margin-bottom: 20px;  /* Adiciona margem na parte inferior do jogo */
+}
+
+#end {
+    margin-top: 20px;  /* Garante espaço antes da área dos botões */
 }

@@ -147,12 +147,17 @@ choices.forEach(choice => {
             if (attempts > 0) {
                 Swal.fire({
                     title: 'Resposta Incorreta!',
-                    text: `Tentativas restantes: ${attempts}\n${currentQuestion.supportText}`,
-                    imageUrl: '../assets/img/error-10376.svg',
+                    html: `Tentativas restantes: ${attempts}<br><div style="margin-top: 20px;">${currentQuestion.supportText}</div>`, // Uso de HTML para formatar o conteúdo                    imageUrl: '../assets/img/error-10376.svg',
                     confirmButtonText: 'Tentar Novamente',
                     imageWidth: 80,
                     imageHeight: 80,
                     imageAlt: 'Ícone de erro customizado',
+                    customClass: {
+                        popup: 'swal-wide',
+                        title: 'swal-title',
+                        content: 'swal-text',
+                        confirmButton: 'swal-button',
+                    }
                 });
                 acceptingAnswers = true; // Permite que o usuário tente novamente
             } else {
@@ -164,6 +169,12 @@ choices.forEach(choice => {
                     imageWidth: 80,
                     imageHeight: 80,
                     imageAlt: 'Ícone de erro customizado',
+                    customClass: {
+                        popup: 'swal-wide',
+                        title: 'swal-title',
+                        content: 'swal-text',
+                        confirmButton: 'swal-button',
+                    }
                 }).then(() => {
                     getNewQuestion();
                 });
@@ -176,8 +187,13 @@ choices.forEach(choice => {
                 imageUrl: '../assets/img/check-7050.svg',
                 imageWidth: 80,
                 imageHeight: 80,
-                imageAlt: 'Ícone de check customizado',    
-
+                imageAlt: 'Ícone de check customizado',
+                customClass: {
+                    popup: 'swal-wide',
+                    title: 'swal-title',
+                    content: 'swal-text',
+                    confirmButton: 'swal-button',
+                }
             }).then(() => {
                 incrementScore(SCORE_POINTS);
                 getNewQuestion();
