@@ -85,6 +85,7 @@ body {
         font-size: 3rem;  /* Fonte menor para dispositivos móveis */
         padding: 1rem;  /* Menor padding para mais espaço */
     }
+<<<<<<< HEAD
 
     .hud-prefix, .hud-main-text {
         font-size: 1.5rem;  /* Ajusta o tamanho da fonte no HUD */
@@ -118,4 +119,22 @@ body, html {
 
 #end {
     margin-top: 20px;  /* Garante espaço antes da área dos botões */
+=======
+}
+
+.swal-wide {
+    width: 600px; /* ou qualquer outro tamanho */
+}
+
+.swal-title {
+    font-size: 40px; /* tamanho da fonte para o título */
+}
+
+.swal-text {
+    font-size: 40px; /* tamanho da fonte para o texto */
+}
+
+.swal-confirm-button {
+    font-size: 20px !important; /* Ajuste o tamanho da fonte conforme necessário */
+>>>>>>> 27411ab603d6e83bcb131027ef3352d3c486142a
 }

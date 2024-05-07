@@ -21,7 +21,11 @@ saveHighScore = e => {
     e.preventDefault()
 
     const sanitizedUsername = sanitizeString(username.value);
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 27411ab603d6e83bcb131027ef3352d3c486142a
     const score = {
         score: mostRecentScore,
         name: username.value

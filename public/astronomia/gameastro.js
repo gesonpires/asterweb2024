@@ -147,6 +147,7 @@ choices.forEach(choice => {
             if (attempts > 0) {
                 Swal.fire({
                     title: 'Resposta Incorreta!',
+<<<<<<< HEAD
                     html: `Tentativas restantes: ${attempts}<br><div style="margin-top: 20px;">${currentQuestion.supportText}</div>`, // Uso de HTML para formatar o conteúdo                    imageUrl: '../assets/img/error-10376.svg',
                     confirmButtonText: 'Tentar Novamente',
                     imageWidth: 80,
@@ -158,12 +159,18 @@ choices.forEach(choice => {
                         content: 'swal-text',
                         confirmButton: 'swal-button',
                     }
+=======
+                    text: `Tentativas restantes: ${attempts}\n${currentQuestion.supportText}`,
+                    icon: 'error',
+                    confirmButtonText: 'Tentar Novamente'
+>>>>>>> 27411ab603d6e83bcb131027ef3352d3c486142a
                 });
                 acceptingAnswers = true; // Permite que o usuário tente novamente
             } else {
                 Swal.fire({
                     title: 'Sem mais tentativas!',
                     text: 'A resposta correta era: ' + currentQuestion['choice' + currentQuestion.answer],
+<<<<<<< HEAD
                     imageUrl: '../assets/img/error-10376.svg',
                     confirmButtonText: 'Tentar Novamente',
                     imageWidth: 80,
@@ -175,6 +182,10 @@ choices.forEach(choice => {
                         content: 'swal-text',
                         confirmButton: 'swal-button',
                     }
+=======
+                    icon: 'error',
+                    confirmButtonText: 'Próxima Pergunta'
+>>>>>>> 27411ab603d6e83bcb131027ef3352d3c486142a
                 }).then(() => {
                     getNewQuestion();
                 });
@@ -183,6 +194,7 @@ choices.forEach(choice => {
             Swal.fire({
                 title:'Correto!',
                 text: 'Parabéns, você acertou!',
+<<<<<<< HEAD
                 confirmButtonText: 'Próxima pergunta',
                 imageUrl: '../assets/img/check-7050.svg',
                 imageWidth: 80,
@@ -193,6 +205,12 @@ choices.forEach(choice => {
                     title: 'swal-title',
                     content: 'swal-text',
                     confirmButton: 'swal-button',
+=======
+                iconHtml: '<i class="fa fa-check" aria-hidden="true"></i>', // FontAwesome
+                confirmButtonText: 'Próxima pergunta',
+                customClass: {
+                    icon: 'custom-icon' // classe personalizada se necessário para estilos adicionais
+>>>>>>> 27411ab603d6e83bcb131027ef3352d3c486142a
                 }
             }).then(() => {
                 incrementScore(SCORE_POINTS);
@@ -212,4 +230,8 @@ incrementScore = num => {
     scoreText.innerText = score;
 };
 
+<<<<<<< HEAD
 startGame();
+=======
+startGame();
+>>>>>>> 27411ab603d6e83bcb131027ef3352d3c486142a
