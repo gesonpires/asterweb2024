@@ -1,4 +1,6 @@
 body {
+    margin: 0;
+    padding: 0;
     color: #fff;
 }
 
@@ -8,15 +10,15 @@ body {
     width: 100%;
     border-radius: 4px;
     background: rgb(18, 93, 255);
-    font-size: 3rem;
-    min-width: 80rem;
+    font-size: 3.5rem;
+    min-width: 0;
 }
 
 .choice-container:hover {
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
     transform: scale(1.02);
-    transform: transform 100ms;
+    transition: transform 200ms;
 }
 
 .choice-prefix {
@@ -30,26 +32,27 @@ body {
 }
 
 .correct {
-    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+    background: linear-gradient(32deg, rgba(11, 223, 36, 1) 0%, rgb(41, 232, 111) 100%);
 }
 
 .incorrect {
-    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11) 100%);
 }
 
-/* Heads up Display */
 #hud {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .categoria {
-    display: center;
+    display: flex;
+    justify-content: center;
 }
 
 .titulo {
     text-align: center;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .hud-prefix {
@@ -64,7 +67,7 @@ body {
 #progressBar {
     width: 20rem;
     height: 3rem;
-    border: 0.2rem solid rgb(11,223,36);
+    border: 0.2rem solid rgb(11, 223, 36);
     margin-top: 2rem;
     border-radius: 50px;
     overflow: hidden;
@@ -72,12 +75,103 @@ body {
 
 #progressBarFull {
     height: 100%;
-    background: rgb(11,223,36);
+    background: rgb(11, 223, 36);
     width: 0%;
+}
+
+.swal-wide {
+    max-width: 90%;
+    width: auto;
+    font-size: 1.5rem;
+    padding: 20px;
+}
+
+.swal-text {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.swal-title {
+    font-size: 10px;
+}
+
+.swal-button {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.swal-tip {
+    font-size: 1.2rem;
+    color: #130279;
 }
 
 @media screen and (max-width: 768px) {
     .choice-container {
-        min-width: 40rem;
+        font-size: 2.5rem;
+        padding: 1rem;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .swal-text {
+        font-size: 1.7rem;
+    }
+    .swal-button {
+        font-size: 1.7rem !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .swal-text {
+        font-size: 2rem;
+    }
+
+    .swal-button {
+        font-size: 2rem !important;
+    }
+
+    .swal-tip {
+        font-size: 2rem;
+    }
+}
+
+#game {
+    margin-bottom: 150px; /* Espaço extra para os botões no final */
+}
+
+#end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+    position: relative;
+}
+
+#end .btn {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#end .btn:hover {
+    background-color: #0056b3;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-bottom: 150px; /* Espaço extra no fundo para os botões */
 }

@@ -1,84 +1,138 @@
 body {
-    color: #fff;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Texto branco para o corpo todo */
 }
 
 .choice-container {
     display: flex;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.8rem; /* Margem inferior para cada container */
     width: 100%;
-    border-radius: 4px;
-    background: rgb(18, 93, 255);
-    font-size: 3rem;
-    min-width: 80rem;
+    border-radius: 4px; /* Bordas arredondadas */
+    background: rgb(18, 93, 255); /* Fundo azul */
+    font-size: 3.5rem; /* Tamanho da fonte grande */
+    min-width: 0; /* Largura mínima */
 }
 
 .choice-container:hover {
-    cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5);
-    transform: scale(1.02);
-    transform: transform 100ms;
+    cursor: pointer; /* Estilo do cursor como ponteiro */
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(6, 103, 247, 0.5); /* Sombra para destacar ao passar o mouse */
+    transform: scale(1.02); /* Leve aumento ao passar o mouse */
+    transition: transform 200ms; /* Transição suave */
 }
 
 .choice-prefix {
-    padding: 2rem 2.5rem;
-    color: white;
+    padding: 2rem 2.5rem; /* Espaçamento interno */
+    color: white; /* Texto branco */
 }
 
 .choice-text {
-    padding: 2rem;
-    width: 100%;
+    padding: 2rem; /* Espaçamento interno */
+    width: 100%; /* Largura completa dentro do container */
 }
 
 .correct {
-    background: linear-gradient(32deg, rgba(11, 223, 36) 0%, rgb(41, 232, 111) 100%);
+    background: linear-gradient(32deg, rgba(11, 223, 36, 1) 0%, rgb(41, 232, 111) 100%); /* Gradiente verde para resposta correta */
 }
 
 .incorrect {
-    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11, 1) 100%);
+    background: linear-gradient(32deg, rgba(230, 29, 29, 1) 0%, rgb(224, 11, 11) 100%); /* Gradiente vermelho para resposta incorreta */
 }
 
-/* Heads up Display */
+/* Heads up Display (HUD) */
 #hud {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaçamento entre os itens */
 }
 
 .categoria {
-    display: center;
+    display: flex; /* Corrigido de 'center' para 'flex' */
+    justify-content: center; /* Centralizar conteúdo */
 }
 
 .titulo {
-    text-align: center;
-    font-size: 3rem;
+    text-align: center; /* Texto centralizado */
+    font-size: 4rem; /* Tamanho da fonte grande para o título */
 }
 
-
 .hud-prefix {
-    text-align: center;
-    font-size: 2rem;
+    text-align: center; /* Texto centralizado */
+    font-size: 2rem; /* Tamanho da fonte */
 }
 
 .hud-main-text {
-    text-align: center;
+    text-align: center; /* Texto centralizado */
 }
 
 #progressBar {
-    width: 20rem;
-    height: 3rem;
-    border: 0.2rem solid rgb(11,223,36);
-    margin-top: 2rem;
-    border-radius: 50px;
-    overflow: hidden;
+    width: 20rem; /* Largura da barra de progresso */
+    height: 3rem; /* Altura da barra de progresso */
+    border: 0.2rem solid rgb(11, 223, 36); /* Borda verde */
+    margin-top: 2rem; /* Margem superior */
+    border-radius: 50px; /* Borda totalmente arredondada */
+    overflow: hidden; /* Oculta o conteúdo que excede o tamanho da barra */
 }
 
 #progressBarFull {
-    height: 100%;
-    background: rgb(11,223,36);
-    width: 0%;
+    height: 100%; /* Altura total dentro da barra de progresso */
+    background: rgb(11, 223, 36); /* Fundo verde */
+    width: 0%; /* Começa sem preenchimento */
+}
+
+.swal-wide {
+    max-width: 90%; /* Largura máxima do alerta para garantir responsividade */
+    width: auto; /* Define largura automática */
+    font-size: 1.5rem; /* Tamanho da fonte responsivo */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.swal-text {
+    font-size: 1.5rem; /* Tamanho da fonte padrão */
+    text-align: center; /* Centraliza o texto */
+}
+
+.swal-title {
+    font-size: 10px;
+}
+
+.swal-button {
+    font-size: 1.5rem; /* Tamanho da fonte dos botões */
+    padding: 0.5rem 1rem; /* Ajusta o padding dos botões para maior clicabilidade */
+
+}
+
+.swal-tip {
+    font-size: 1.2rem; /* Tamanho da fonte para a dica */
+    color: #130279; /* Cor da fonte para a dica */
 }
 
 @media screen and (max-width: 768px) {
     .choice-container {
-        min-width: 40rem;
+        font-size: 2.5rem; /* Reduz o tamanho da fonte para não sobrecarregar o layout em telas pequenas */
+        padding: 1rem; /* Reduz o padding para economizar espaço */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .swal-text {
+        font-size: 1.7rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+    .swal-button {
+        font-size: 1.7rem !important; /* Reduz o tamanho da fonte dos botões em telas menores */
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .swal-text {
+        font-size: 2rem; /* Ajuste adicional para telas muito pequenas */
+    }
+
+    .swal-button {
+        font-size: 2rem !important; /* Ajuste adicional para botões em telas muito pequenas */
+    }
+
+    .swal-tip {
+        font-size: 2rem; /* Ajuste adicional para a dica em telas muito pequenas */
     }
 }
